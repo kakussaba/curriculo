@@ -1,18 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Kananda Kussaba</title>
     <link rel="stylesheet" href="assets/bootstrap-4.1.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link rel="stylesheet" href="assets/fonts/fontawesome-free-5.5.0-web/css/all.min.css" >
-</head>
-<body>
-    <main role="main">
 
-        <!-- Main jumbotron for a primary marketing message or call to action -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="assets/bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</head>
+<body id="body" class="light">
+    <main role="main">
         <div id="header">
+            <div class="col-md-12">
+                    <div class="dropdown right">
+                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Selecione um tema
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a id="light" class="dropdown-item" href="#" onClick="setTheme('light')">Light</a>
+                            <a id="black" class="dropdown-item" href="#" onClick="setTheme('dark')">Dark</a>
+                        </div>
+                    </div>
+            </div>
         </div>
 
         <section id="about">
@@ -31,7 +45,7 @@
                                         <div class="about-section-title">Sobre mim</div>
                                         <div class="about-data">
                                             <p>
-                                                Tenho 23 anos, sou bacharel em Engenharia da Computação e desenvolvedora Front-end e Mobile desde 2012.
+                                                Tenho 23 anos, sou bacharel em Engenharia da Computação e desenvolvedora Front End e Mobile desde 2012.
                                             </p>
                                             <div><span>CPF</span>085.706.219-06</div>
                                             <div><span>Endereço</span>Rua José Dias Aro, 383 - Vila Recreio - Londrina, PR</div>
@@ -41,8 +55,8 @@
                                     </div>
                                 </div>
                                 <div class="col-md-12 about-social">
-                                    <a class="waves-effect waves-light" href="#0"><i class="fab fa-github-alt"></i></a>
-                                    <a class="waves-effect waves-light" href="#0"><i class="fab fa-linkedin"></i></a>
+                                    <a class="waves-effect waves-light" href="https://github.com/kakussaba" target="blank"><i class="fab fa-github-alt"></i></a>
+                                    <a class="waves-effect waves-light" href="https://www.linkedin.com/in/kananda-kussaba-69913388/" target="blank"><i class="fab fa-linkedin"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -50,6 +64,31 @@
                 </div>
             </div>
         </section>
+
+        <div id="interesting" class="container">
+            <div class="row">
+                <div class="col-md-12 section-title">
+                    <h2>Interesses Profissionais</h2>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-12 section-content shadow-bg">
+                        <div class="col-md-12 skill-data">
+                            <div id="rex-interesting-slider">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p>Atuar na área de desenvolvimento Front End e Mobile, 
+                                            produzindo códigos de alta qualidade e performance assim
+                                            proporcionando ao usuário uma boa experiência de navegação. </p>
+                                            <p>Conhecer novas tecnologias e aprimorar as já conhecidas. </p>
+                                            <p>Desenvolver boas técnicas de programação e trabalho em equipe.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div id="education" class="container">
             <div class="row">
@@ -66,7 +105,7 @@
                                     </div>
                                     <div class="col-md-10 list-description">
                                         <h6>Unopar</h6>
-                                        <span>Engenharia da Computação - 2012/ 2017</span>
+                                        <span>Engenharia da Computação - [2012-2017]</span>
                                         <p>Bacharelado em Engenharia da Computação.</p>
                                     </div>
                                 </div>
@@ -74,6 +113,26 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="col-md-12">
+                    <div class="col-md-12 section-content shadow-bg">
+                        <div class="col-md-12 skill-data">
+                            <div id="rex-education-slider">
+                                <div class="row">
+                                    <div class="col-md-2 list-img">
+                                        <img src="assets/imgs/microcamp.jpg" alt="" width="100" height="95">
+                                    </div>
+                                    <div class="col-md-10 list-description">
+                                        <h6>Microcamp</h6>
+                                        <span>Tecnologia da Informação [2009-2011]</span>
+                                        <p>Curso técnico com enfâse em programação e redes.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 
@@ -82,26 +141,8 @@
                 <div class="col-md-12 section-title">
                     <h2>Experiência</h2>
                 </div>
-                <div class="col-md-12">
-                    <div class="col-md-12 section-content shadow-bg">
-                        <div class="col-md-12 skill-data">
-                            <div id="rex-experience-slider">
-                                <div class="row">
-                                    <div class="col-md-2 list-img">
-                                        <div class="experience-date">
-                                            <h6>Setembro/ 2018 - <br>Atual</h6>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-10 list-description">
-                                        <h6>Maptriz Smart City</h6>
-                                        <span>Desenvolvedor Mobile</span>
-                                        <p>Responsável pelo desenvolvimento de aplicações mobile.</p>
-                                        <p>Tecnologias: Android, Spring Boot e Java.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div id="empresas" class="col-md-12">
+                    
                 </div>
             </div>
         </div>
@@ -112,65 +153,65 @@
                     <h2>Habilidades</h2>
                 </div>
                 <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-4 service-wrapper wow zoomIn animated" data-wow-duration="0.5s" data-wow-delay="0.3s" data-wow-offset="0">
-                            <div class="col-md-12 skill shadow-bg">
-                                <div class="service-center">
-                                    <div class="service-icon">
-                                        <span class="fa fa-laptop"></span>
-                                    </div>
-                                    <div class="service-title">
-                                        FRONT END
-                                    </div>
-                                </div>
-                                <div class="service-desc">
-                                    <p>
-                                        CSS3, HTML5, JavaScript, jQuery, ReactJS, VueJS, Bootstrap, MaterialUI, Material Design Component, SASS, LESS e Stylus.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4 service-wrapper wow zoomIn animated" data-wow-duration="0.5s" data-wow-delay="0.3s" data-wow-offset="0">
-                            <div class="col-md-12 skill shadow-bg">
-                                <div class="service-center">
-                                    <div class="service-icon">
-                                        <span class="fa fa-desktop"></span>
-                                    </div>
-                                    <div class="service-title">
-                                        BACK END
-                                    </div>
-                                </div>
-                                <div class="service-desc">
-                                    <p>
-                                        Java, Spring Boot, MySQL, e PHP.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4 service-wrapper wow zoomIn animated" data-wow-duration="0.5s" data-wow-delay="0.3s" data-wow-offset="0">
-                            <div class="col-md-12 skill shadow-bg">
-                                <div class="service-center">
-                                    <div class="service-icon">
-                                        <span class="fa fa-mobile"></span>
-                                    </div>
-                                    <div class="service-title">
-                                        MOBILE
-                                    </div>
-                                </div>
-                                <div class="service-desc">
-                                    <p>
-                                        Android e React Native (Android e iOS).
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                    <div id="habilidades" class="row">
+                        
                     </div>
                 </div>
             </div>
         </div>
 
+        <div id="languages" class="container">
+            <div class="row">
+              <div class="col-md-12 section-title">
+                <h2>Idiomas</h2>
+              </div>
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-md-4 service-wrapper wow zoomIn animated" data-wow-duration="0.5s" data-wow-delay="0.3s" data-wow-offset="0">
+                    <div class="col-md-12 skill shadow-bg">
+                      <div class="service-center">
+                        <div class="service-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <div class="service-title">
+                          INGLÊS
+                          <span>[INTERMEDIÁRIO]</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <div class="col-md-4 service-wrapper wow zoomIn animated" data-wow-duration="0.5s" data-wow-delay="0.3s" data-wow-offset="0">
+                    <div class="col-md-12 skill shadow-bg">
+                      <div class="service-center">
+                        <div class="service-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <div class="service-title">
+                          ESPANHOL
+                          <span>[INTERMEDIÁRIO]</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <div class="col-md-4 service-wrapper wow zoomIn animated" data-wow-duration="0.5s" data-wow-delay="0.3s" data-wow-offset="0">
+                    <div class="col-md-12 skill shadow-bg">
+                      <div class="service-center">
+                        <div class="service-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <div class="service-title">
+                          JAPONÊS
+                          <span>[BÁSICO]</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
     </main>
 </body>
 </html>

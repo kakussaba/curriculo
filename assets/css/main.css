@@ -1,5 +1,5 @@
 body {
-  color: #555;
+  color: #000;
   font-family: 'Ubuntu', 'Open Sans', 'Sans Serif' !important;
 }
 .shadow-bg {
@@ -12,16 +12,23 @@ body {
   -moz-box-shadow: 0 1px 6px rgba(0,0,0,0.1), 0px 1px 6px rgba(0,0,0,0.2);
   box-shadow: 0 1px 6px rgba(0,0,0,0.1), 0px 1px 6px rgba(0,0,0,0.2);
 }
+.right {
+  float: right;
+}
 #header {
   height: 400px;
-  background-color: #ffb6c1;
+}
+#header .dropdown {
+  padding: 20px 0;
+}
+#header .dropdown .btn {
+  border-radius: 0;
 }
 #about {
   margin-top: -250px;
 }
 #about .about-box {
   padding: 40px;
-  background: #fff;
 }
 #about .about-box .about-personal,
 #about .about-box .about-data-wrapper {
@@ -59,7 +66,6 @@ body {
   text-transform: uppercase;
   position: relative;
   line-height: 1.7;
-  color: #a9a9a9;
 }
 #about .about-box .about-personal .about-section-title::after,
 #about .about-box .about-data-wrapper .about-section-title::after,
@@ -74,7 +80,6 @@ body {
   left: 0;
   width: 70px;
   height: 3px;
-  background: #ffb6c1;
   border-radius: 30px;
 }
 #about .about-box .about-personal .about-data,
@@ -116,7 +121,6 @@ body {
 }
 #about .about-box .about-social a {
   text-align: center;
-  color: #fff;
   font-size: 20px;
   position: relative;
   display: inline-block;
@@ -131,85 +135,106 @@ body {
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
 }
-#about .about-box .about-social a:hover {
-  background: #fff;
-}
-#about .about-box .about-social a:hover i {
-  color: #ffb6c1;
-}
 #education,
 #experience,
-#skills {
+#skills,
+#languages,
+#interesting {
   margin-top: 60px;
 }
 #education .section-title h2,
 #experience .section-title h2,
-#skills .section-title h2 {
+#skills .section-title h2,
+#languages .section-title h2,
+#interesting .section-title h2 {
   font-size: 28px;
   font-weight: 700;
   letter-spacing: 5px;
-  color: #555;
   text-transform: uppercase;
   text-align: center;
   margin: 40px 0 0;
 }
 #education .section-content,
 #experience .section-content,
-#skills .section-content {
+#skills .section-content,
+#languages .section-content,
+#interesting .section-content {
   padding: 50px;
   margin-top: 50px;
 }
 #education .section-content .list-description h6,
 #experience .section-content .list-description h6,
-#skills .section-content .list-description h6 {
+#skills .section-content .list-description h6,
+#languages .section-content .list-description h6,
+#interesting .section-content .list-description h6 {
   font-weight: 700;
   font-size: 20px;
 }
+#education .section-content .list-description h6 span,
+#experience .section-content .list-description h6 span,
+#skills .section-content .list-description h6 span,
+#languages .section-content .list-description h6 span,
+#interesting .section-content .list-description h6 span {
+  font-size: 12px;
+  display: initial !important;
+  font-weight: 300;
+}
 #education .section-content .list-description span,
 #experience .section-content .list-description span,
-#skills .section-content .list-description span {
+#skills .section-content .list-description span,
+#languages .section-content .list-description span,
+#interesting .section-content .list-description span {
   font-weight: 600;
   margin-bottom: 10px;
   display: block;
 }
 #education .section-content .list-description p,
 #experience .section-content .list-description p,
-#skills .section-content .list-description p {
+#skills .section-content .list-description p,
+#languages .section-content .list-description p,
+#interesting .section-content .list-description p {
   font-weight: 300;
   font-size: 14px;
 }
 #education .section-content .list-img img,
 #experience .section-content .list-img img,
-#skills .section-content .list-img img {
-  margin-top: 10px;
+#skills .section-content .list-img img,
+#languages .section-content .list-img img,
+#interesting .section-content .list-img img {
+  display: block;
+  margin: 0 auto;
 }
 #education .section-content .list-img .experience-date,
 #experience .section-content .list-img .experience-date,
-#skills .section-content .list-img .experience-date {
+#skills .section-content .list-img .experience-date,
+#languages .section-content .list-img .experience-date,
+#interesting .section-content .list-img .experience-date {
   width: 100%;
   z-index: 1;
-  background: #ffb6c1;
   text-align: center;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  border-radius: 50%;
 }
-#education .section-content .list-img .experience-date h6,
-#experience .section-content .list-img .experience-date h6,
-#skills .section-content .list-img .experience-date h6 {
-  padding: 33% 11%;
-  color: #fff;
-  font-weight: 600;
-  font-size: 14px;
+#education .section-content .list-img .experience-date i,
+#experience .section-content .list-img .experience-date i,
+#skills .section-content .list-img .experience-date i,
+#languages .section-content .list-img .experience-date i,
+#interesting .section-content .list-img .experience-date i {
+  font-size: 56px;
+  padding: 35px;
 }
-#skills .service-wrapper {
+#skills .service-wrapper,
+#languages .service-wrapper {
   margin-top: 50px;
-  margin-bottom: 50px;
 }
-#skills .service-wrapper .skill {
+#skills .service-wrapper .skill,
+#languages .service-wrapper .skill {
   padding: 40px;
   min-height: 205px;
 }
-#skills .service-wrapper .skill .service-center {
+#skills .service-wrapper .skill .service-center,
+#languages .service-wrapper .skill .service-center {
   padding: 0 40px;
   position: absolute;
   width: 100%;
@@ -228,13 +253,14 @@ body {
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-#skills .service-wrapper .skill .service-center .service-icon {
+#skills .service-wrapper .skill .service-center .service-icon,
+#languages .service-wrapper .skill .service-center .service-icon {
   font-size: 28px;
   padding-bottom: 15px;
   text-align: center;
-  color: #ffb6c1;
 }
-#skills .service-wrapper .skill .service-center .service-title {
+#skills .service-wrapper .skill .service-center .service-title,
+#languages .service-wrapper .skill .service-center .service-title {
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 3px;
@@ -242,16 +268,23 @@ body {
   line-height: 1.5;
   text-align: center;
 }
-#skills .service-wrapper .skill .service-center .service-title::after {
+#skills .service-wrapper .skill .service-center .service-title span,
+#languages .service-wrapper .skill .service-center .service-title span {
+  display: block;
+  font-size: 10px;
+  font-weight: 300;
+}
+#skills .service-wrapper .skill .service-center .service-title::after,
+#languages .service-wrapper .skill .service-center .service-title::after {
   display: block;
   content: '';
   margin: 18px auto 0;
   width: 50px;
   height: 3px;
-  background: #ffb6c1;
   border-radius: 30px;
 }
-#skills .service-wrapper .service-desc {
+#skills .service-wrapper .service-desc,
+#languages .service-wrapper .service-desc {
   opacity: 0;
   visibility: hidden;
   -webkit-transform: scale(0.5);
@@ -266,11 +299,11 @@ body {
   transition: all 0.5s;
   text-align: center;
 }
-#skills .service-wrapper .service-desc p {
+#skills .service-wrapper .service-desc p,
+#languages .service-wrapper .service-desc p {
   font-size: 15px;
   line-height: 1.8;
   font-weight: 400;
-margin-bottom
 }
 #skills .service-wrapper:hover .service-center {
   opacity: 0;
@@ -284,4 +317,217 @@ margin-bottom
   -ms-transform: scale(1);
   -o-transform: scale(1);
   transform: scale(1);
+}
+#languages .service-wrapper {
+  margin-bottom: 50px;
+}
+.light {
+  background: #fff;
+}
+.light #header {
+  background-color: #ffb6c1;
+}
+.light #header .dropdown .btn {
+  background: #fff;
+  border-color: #fff;
+  color: #a9a9a9;
+}
+.light #about .about-box {
+  background: #fff;
+}
+.light #about .about-box .about-name,
+.light #about .about-box .about-title,
+.light #about .about-box .about-section-title {
+  color: #a9a9a9;
+}
+.light #about .about-box .about-section-title::after,
+.light #about .about-box .service-title::after,
+.light #about .about-box .timeline-title::after {
+  background: #ffb6c1;
+}
+.light #about .about-box .about-data p,
+.light #about .about-box .about-data div {
+  color: #000;
+}
+.light #about .about-box .about-social {
+  background: #ffb6c1;
+}
+.light #about .about-box .about-social a {
+  color: #fff;
+}
+.light #about .about-box .about-social a:hover {
+  background: #fff;
+}
+.light #about .about-box .about-social a:hover i {
+  color: #ffb6c1;
+}
+.light #education .section-title h2,
+.light #experience .section-title h2,
+.light #skills .section-title h2,
+.light #languages .section-title h2,
+.light #interesting .section-title h2 {
+  color: #808080;
+}
+.light #education .section-content,
+.light #experience .section-content,
+.light #skills .section-content,
+.light #languages .section-content,
+.light #interesting .section-content {
+  background: #fff;
+}
+.light #education .section-content .list-description h6 span,
+.light #experience .section-content .list-description h6 span,
+.light #skills .section-content .list-description h6 span,
+.light #languages .section-content .list-description h6 span,
+.light #interesting .section-content .list-description h6 span {
+  color: #a9a9a9;
+}
+.light #education .section-content .list-img img,
+.light #experience .section-content .list-img img,
+.light #skills .section-content .list-img img,
+.light #languages .section-content .list-img img,
+.light #interesting .section-content .list-img img,
+.light #education .section-content .list-img .experience-date,
+.light #experience .section-content .list-img .experience-date,
+.light #skills .section-content .list-img .experience-date,
+.light #languages .section-content .list-img .experience-date,
+.light #interesting .section-content .list-img .experience-date {
+  background: #ffb6c1;
+}
+.light #education .section-content .list-img img i,
+.light #experience .section-content .list-img img i,
+.light #skills .section-content .list-img img i,
+.light #languages .section-content .list-img img i,
+.light #interesting .section-content .list-img img i,
+.light #education .section-content .list-img .experience-date i,
+.light #experience .section-content .list-img .experience-date i,
+.light #skills .section-content .list-img .experience-date i,
+.light #languages .section-content .list-img .experience-date i,
+.light #interesting .section-content .list-img .experience-date i {
+  color: #fff;
+}
+.light #skills .skill,
+.light #languages .skill {
+  background: #fff;
+}
+.light #skills .skill .service-icon,
+.light #languages .skill .service-icon {
+  color: #ffb6c1;
+}
+.light #skills .skill .service-title,
+.light #languages .skill .service-title {
+  color: #a9a9a9;
+}
+.light #skills .skill .service-title span,
+.light #languages .skill .service-title span {
+  color: #a9a9a9;
+}
+.light #skills .skill .service-title::after,
+.light #languages .skill .service-title::after {
+  background: #ffb6c1;
+}
+.dark {
+  background: #000;
+}
+.dark #header {
+  background-color: #808080;
+}
+.dark #header .dropdown .btn {
+  background: #000;
+  border-color: #000;
+  color: #fff;
+}
+.dark #about .about-box {
+  background: #000;
+}
+.dark #about .about-name,
+.dark #about .about-title,
+.dark #about .about-section-title {
+  color: #fff;
+}
+.dark #about .about-section-title::after,
+.dark #about .service-title::after,
+.dark #about .timeline-title::after {
+  background: #808080;
+}
+.dark #about .about-data p,
+.dark #about .about-data div {
+  color: #fff;
+}
+.dark #about .about-social {
+  background: #808080;
+}
+.dark #about .about-social a {
+  color: #000;
+}
+.dark #about .about-social a:hover {
+  background: #000;
+}
+.dark #about .about-social a:hover i {
+  color: #808080;
+}
+.dark #education .section-title h2,
+.dark #experience .section-title h2,
+.dark #skills .section-title h2,
+.dark #languages .section-title h2,
+.dark #interesting .section-title h2 {
+  color: #fff;
+}
+.dark #education .section-content,
+.dark #experience .section-content,
+.dark #skills .section-content,
+.dark #languages .section-content,
+.dark #interesting .section-content {
+  background: #fff;
+}
+.dark #education .section-content .list-description h6 span,
+.dark #experience .section-content .list-description h6 span,
+.dark #skills .section-content .list-description h6 span,
+.dark #languages .section-content .list-description h6 span,
+.dark #interesting .section-content .list-description h6 span {
+  color: #fff;
+}
+.dark #education .section-content .list-img img,
+.dark #experience .section-content .list-img img,
+.dark #skills .section-content .list-img img,
+.dark #languages .section-content .list-img img,
+.dark #interesting .section-content .list-img img,
+.dark #education .section-content .list-img .experience-date,
+.dark #experience .section-content .list-img .experience-date,
+.dark #skills .section-content .list-img .experience-date,
+.dark #languages .section-content .list-img .experience-date,
+.dark #interesting .section-content .list-img .experience-date {
+  background: #808080;
+}
+.dark #education .section-content .list-img img i,
+.dark #experience .section-content .list-img img i,
+.dark #skills .section-content .list-img img i,
+.dark #languages .section-content .list-img img i,
+.dark #interesting .section-content .list-img img i,
+.dark #education .section-content .list-img .experience-date i,
+.dark #experience .section-content .list-img .experience-date i,
+.dark #skills .section-content .list-img .experience-date i,
+.dark #languages .section-content .list-img .experience-date i,
+.dark #interesting .section-content .list-img .experience-date i {
+  color: #000;
+}
+.dark #skills .skill,
+.dark #languages .skill {
+  background: #a9a9a9;
+}
+.dark #skills .skill .service-icon,
+.dark #languages .skill .service-icon {
+  color: #808080;
+}
+.dark #skills .skill .service-title,
+.dark #languages .skill .service-title {
+  color: #fff;
+}
+.dark #skills .skill .service-title span,
+.dark #languages .skill .service-title span {
+  color: #fff;
+}
+.dark #skills .skill .service-title::after,
+.dark #languages .skill .service-title::after {
+  background: #000;
 }

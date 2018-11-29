@@ -1,7 +1,8 @@
 $white = #FFFFFF
 $darkGray = #A9A9A9
 $lightPink = #ffb6c1
-$black = #555555
+$black = #000000
+$grey = #808080
 
 body
   color $black
@@ -17,16 +18,23 @@ body
   -moz-box-shadow 0 1px 6px rgba(0, 0, 0, 0.10), 0px 1px 6px rgba(0, 0, 0, 0.20)
   box-shadow 0 1px 6px rgba(0, 0, 0, 0.10), 0px 1px 6px rgba(0, 0, 0, 0.20)
 
+.right
+  float right
+
 #header
   height 400px
-  background-color $lightPink
+
+  .dropdown
+    padding 20px 0
+    
+    .btn
+      border-radius 0
 
 #about
   margin-top -250px
 
   .about-box
     padding 40px
-    background $white
 
     .about-personal, .about-data-wrapper
       margin-bottom 60px
@@ -59,7 +67,6 @@ body
         text-transform uppercase
         position relative
         line-height 1.7
-        color $darkGray
 
       .about-section-title::after, .service-title::after, .timeline-title::after
         display inline-block
@@ -69,7 +76,6 @@ body
         left 0
         width 70px
         height 3px
-        background $lightPink
         border-radius 30px
 
       .about-data
@@ -106,7 +112,6 @@ body
 
       a
         text-align center
-        color #ffffff
         font-size 20px
         position relative
         display inline-block
@@ -121,13 +126,7 @@ body
         -moz-transition all 0.5s
         -o-transition all 0.5s
 
-      a:hover
-        background $white
-
-        i
-          color $lightPink
-
-#education, #experience, #skills
+#education, #experience, #skills, #languages, #interesting
   margin-top 60px
 
   .section-title
@@ -135,7 +134,6 @@ body
       font-size 28px
       font-weight 700
       letter-spacing 5px
-      color #555555
       text-transform uppercase
       text-align center
       margin 40px 0 0
@@ -149,6 +147,11 @@ body
         font-weight 700
         font-size 20px
 
+        span
+          font-size 12px
+          display initial !important
+          font-weight 300
+
       span
         font-weight 600
         margin-bottom 10px
@@ -160,26 +163,24 @@ body
 
     .list-img
       img
-        margin-top 10px
+        display block
+        margin 0 auto
 
       .experience-date
         width 100%
         z-index 1
-        background $lightPink
         text-align center
         -webkit-transition 0.4s
         transition 0.4s
+        border-radius 50%
 
-        h6
-          padding 33% 11%
-          color #fff
-          font-weight 600
-          font-size 14px
+        i
+          font-size 56px
+          padding 35px
 
-#skills
+#skills, #languages
   .service-wrapper
     margin-top 50px
-    margin-bottom 50px
 
     .skill
       padding 40px
@@ -208,7 +209,6 @@ body
           font-size 28px
           padding-bottom 15px
           text-align center
-          color $lightPink
 
         .service-title
           font-size 16px
@@ -218,13 +218,17 @@ body
           line-height 1.5
           text-align center
 
+          span
+            display block
+            font-size 10px
+            font-weight 300
+
         .service-title::after
           display block
           content ''
           margin 18px auto 0
           width 50px
           height 3px
-          background $lightPink
           border-radius 30px
 
     .service-desc
@@ -246,8 +250,8 @@ body
         font-size 15px
         line-height 1.8
         font-weight 400
-        margin-bottom
 
+#skills
   .service-wrapper:hover
     .service-center
       opacity 0
@@ -261,3 +265,157 @@ body
       -ms-transform scale(1)
       -o-transform scale(1)
       transform scale(1)
+
+#languages
+  .service-wrapper
+    margin-bottom 50px
+
+.light
+  background $white
+
+  #header
+    background-color $lightPink
+
+    .dropdown
+      .btn
+        background $white
+        border-color $white
+        color $darkGray
+
+  #about
+    .about-box
+      background $white
+
+      .about-name, .about-title, .about-section-title
+        color $darkGray
+
+      .about-section-title::after, .service-title::after, .timeline-title::after
+        background $lightPink
+
+      .about-data
+        p, div
+          color $black
+
+      .about-social
+        background $lightPink
+
+        a
+          color $white
+
+        a:hover
+          background $white
+
+          i
+            color $lightPink
+
+  #education, #experience, #skills, #languages, #interesting
+    .section-title
+      h2
+        color $grey
+
+    .section-content
+      background $white
+
+      .list-description
+        h6
+          span
+            color $darkGray
+
+      .list-img
+        img
+        .experience-date
+          background $lightPink
+
+          i
+            color $white
+
+  #skills, #languages
+    .skill
+      background $white
+
+      .service-icon
+        color $lightPink
+
+      .service-title
+        color $darkGray
+
+        span
+            color $darkGray
+
+      .service-title::after
+        background $lightPink
+
+.dark
+  background $black
+
+  #header
+    background-color $grey
+
+    .dropdown
+      .btn
+        background $black
+        border-color $black
+        color $white
+
+  #about
+    .about-box
+      background $black
+
+     .about-name, .about-title, .about-section-title
+        color $white
+
+      .about-section-title::after, .service-title::after, .timeline-title::after
+        background $grey
+
+       .about-data
+        p, div
+          color $white
+
+      .about-social
+        background $grey
+
+        a
+          color $black
+
+        a:hover
+          background $black
+
+          i
+            color $grey
+  #education, #experience, #skills, #languages, #interesting
+    .section-title
+      h2
+        color $white
+
+    .section-content
+      background $white
+
+      .list-description
+        h6
+          span
+            color $white
+
+      .list-img
+        img
+        .experience-date
+          background $grey
+
+          i
+            color $black
+
+  #skills, #languages
+    .skill
+      background $darkGray
+
+      .service-icon
+        color $grey
+      
+      .service-title
+        color $white
+
+        span
+          color $white
+
+      .service-title::after
+        background $black
+
